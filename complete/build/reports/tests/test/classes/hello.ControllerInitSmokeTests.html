@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class hello.ControllerInitSmokeTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class hello.ControllerInitSmokeTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/hello.html">hello</a> &gt; ControllerInitSmokeTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.008s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">contexLoads</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2018-11-30 23:52:18.284  INFO 47517 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [hello.ControllerInitSmokeTests], using SpringBootContextLoader
+2018-11-30 23:52:18.286  INFO 47517 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [hello.ControllerInitSmokeTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-11-30 23:52:18.286  INFO 47517 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hello.ControllerInitSmokeTests]: ControllerInitSmokeTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-11-30 23:52:18.301  INFO 47517 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hello.Application for test class hello.ControllerInitSmokeTests
+2018-11-30 23:52:18.303  INFO 47517 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-11-30 23:52:18.305  INFO 47517 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@669412f6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4035e008, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@19266720, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@531a8114, org.springframework.test.context.support.DirtiesContextTestExecutionListener@155f3a23, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7a05bd20, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5030da27, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5725f314, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3bc745f1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6cfc0314]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.0.5.RELEASE)
+
+2018-11-30 23:52:18.369  WARN 47517 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/jawshcalder/.gradle/caches/modules-2/files-2.1/org.json/json/20180813/8566b2b0391d9d4479ea225645c6ed47ef17fe41/json-20180813.jar!/org/json/JSONObject.class
+	jar:file:/Users/jawshcalder/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2018-11-30 23:52:18.370  INFO 47517 --- [    Test worker] hello.ControllerInitSmokeTests           : Starting ControllerInitSmokeTests on Josh-2.local with PID 47517 (started by jawshcalder in /Users/jawshcalder/Dev/seng330/assn3-jj-boolean/complete)
+2018-11-30 23:52:18.371  INFO 47517 --- [    Test worker] hello.ControllerInitSmokeTests           : No active profile set, falling back to default profiles: default
+2018-11-30 23:52:18.375  INFO 47517 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6f8ee06a: startup date [Fri Nov 30 23:52:18 PST 2018]; root of context hierarchy
+2018-11-30 23:52:18.771  INFO 47517 --- [    Test worker] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-11-30 23:52:18.822  WARN 47517 --- [    Test worker] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: void hello.Services.HubService.HubService()
+2018-11-30 23:52:19.099  INFO 47517 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-30 23:52:19.245  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6f8ee06a: startup date [Fri Nov 30 23:52:18 PST 2018]; root of context hierarchy
+2018-11-30 23:52:19.273  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/camera/{uuid}]}&quot; onto public java.lang.String hello.Controllers.CameraController.camera(java.util.UUID,org.springframework.ui.Model)
+2018-11-30 23:52:19.274  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/camera/toggle/{uuid}]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.CameraController.cameraToggle(java.util.UUID,org.springframework.ui.Model)
+2018-11-30 23:52:19.274  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/camera/togglerecord/{uuid}]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.CameraController.cameraToggleRecord(java.util.UUID,org.springframework.ui.Model)
+2018-11-30 23:52:19.274  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/camera/updatedisk/{uuid}]}&quot; onto public int hello.Controllers.CameraController.cameraUpdateDisk(java.util.UUID)
+2018-11-30 23:52:19.276  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/hub]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.HubController.hub(org.springframework.ui.Model) throws hello.HubRegistrationException
+2018-11-30 23:52:19.276  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/hub/shutdown]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.HubController.shutdownHub(org.springframework.ui.Model)
+2018-11-30 23:52:19.277  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/lightbulb/add]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.HubController.lightbulbAdd(org.springframework.ui.Model) throws hello.HubRegistrationException
+2018-11-30 23:52:19.277  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/smartplug/add]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.HubController.smartplugAdd(org.springframework.ui.Model) throws hello.HubRegistrationException
+2018-11-30 23:52:19.278  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/thermostat/add]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.HubController.thermostatAdd(org.springframework.ui.Model) throws hello.HubRegistrationException,hello.Devices.Temperature$TemperatureOutofBoundsException
+2018-11-30 23:52:19.278  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/camera/add]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.HubController.cameraAdd(org.springframework.ui.Model) throws hello.HubRegistrationException
+2018-11-30 23:52:19.279  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/remove/{uuid}]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.HubController.removeDevice(java.util.UUID,org.springframework.ui.Model) throws hello.HubRegistrationException
+2018-11-30 23:52:19.279  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/check_event]}&quot; onto public java.lang.String hello.Controllers.HubController.checkRandomEventStatus(org.springframework.ui.Model)
+2018-11-30 23:52:19.279  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/edit/{uuid}]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.HubController.editDevice(java.util.UUID,org.springframework.ui.Model)
+2018-11-30 23:52:19.280  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/lightbulb/toggle/{uuid}]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.LightbulbController.lightbulbToggle(java.util.UUID,org.springframework.ui.Model)
+2018-11-30 23:52:19.281  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/lightbulb/{uuid}]}&quot; onto public java.lang.String hello.Controllers.LightbulbController.lightbulb(java.util.UUID,org.springframework.ui.Model)
+2018-11-30 23:52:19.284  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/user/registration],methods=[GET]}&quot; onto public java.lang.String hello.Controllers.LoginController.registrationForm(org.springframework.ui.Model)
+2018-11-30 23:52:19.284  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/user/registration],methods=[POST]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.LoginController.registrationSubmit(org.springframework.ui.Model,hello.User) throws hello.HubRegistrationException
+2018-11-30 23:52:19.285  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/user/login],methods=[GET]}&quot; onto public java.lang.String hello.Controllers.LoginController.loginForm(org.springframework.ui.Model)
+2018-11-30 23:52:19.286  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/user/login],methods=[POST]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.LoginController.loginValidate(org.springframework.ui.Model,hello.User,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws hello.WrongPasswordException,hello.NoSuchUserException
+2018-11-30 23:52:19.286  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/user/logout]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.LoginController.userLogout(org.springframework.ui.Model)
+2018-11-30 23:52:19.286  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/user/remove/{userName}]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.LoginController.userRemove(java.lang.String,org.springframework.ui.Model) throws hello.HubRegistrationException
+2018-11-30 23:52:19.287  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/user/control/{userName}]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.LoginController.userControl(java.lang.String,org.springframework.ui.Model) throws hello.HubRegistrationException
+2018-11-30 23:52:19.288  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/smartplug/toggle/{uuid}]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.SmartPlugController.smartplugToggle(java.util.UUID,org.springframework.ui.Model)
+2018-11-30 23:52:19.288  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/smartplug/{uuid}]}&quot; onto public java.lang.String hello.Controllers.SmartPlugController.smartplug(java.util.UUID,org.springframework.ui.Model)
+2018-11-30 23:52:19.289  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/thermostat/{uuid}]}&quot; onto public java.lang.String hello.Controllers.ThermostatController.thermostat(java.util.UUID,org.springframework.ui.Model)
+2018-11-30 23:52:19.290  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/thermostat/toggle/{uuid}]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.ThermostatController.thermostatStart(java.util.UUID,org.springframework.ui.Model)
+2018-11-30 23:52:19.290  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/thermostat/convert/{uuid}]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.ThermostatController.thermostatConvert(java.util.UUID,org.springframework.ui.Model)
+2018-11-30 23:52:19.291  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/thermostat/increasetemp/{uuid}]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.ThermostatController.thermostatIncreaseTemp(java.util.UUID,org.springframework.ui.Model)
+2018-11-30 23:52:19.291  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/thermostat/decreasetemp/{uuid}]}&quot; onto public org.springframework.web.servlet.ModelAndView hello.Controllers.ThermostatController.thermostatDecreaseTemp(java.util.UUID,org.springframework.ui.Model)
+2018-11-30 23:52:19.294  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error]}&quot; onto public org.springframework.http.ResponseEntity&lt;java.util.Map&lt;java.lang.String, java.lang.Object&gt;&gt; org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-11-30 23:52:19.297  INFO 47517 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error],produces=[text/html]}&quot; onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-11-30 23:52:19.326  INFO 47517 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-30 23:52:19.327  INFO 47517 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-30 23:52:19.441  INFO 47517 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2018-11-30 23:52:19.634  INFO 47517 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2018-11-30 23:52:19.634  INFO 47517 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2018-11-30 23:52:19.641  INFO 47517 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 6 ms
+2018-11-30 23:52:19.690  INFO 47517 --- [    Test worker] hello.ControllerInitSmokeTests           : Started ControllerInitSmokeTests in 1.376 seconds (JVM running for 9.743)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 4.10.1</a> at 30-Nov-2018 11:52:22 PM</p>
+</div>
+</div>
+</body>
+</html>

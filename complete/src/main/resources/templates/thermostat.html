@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="'Thermostat: ' + ${uuid}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1 th:text="'Thermostat: ' + ${uuid}"></h1>
+<p th:text="'Thermostat Status: ' + ${thermostatStatus}" />
+<div th:if="${thermostatStatus == 'ON'}">
+    <p style="display: inline-block; margin: 0" th:text="'Current Temperature: ' + ${temperature} + ' ' + ${unit}" />
+    <input type="button" th:onclick="'location.href = \'' + @{/thermostat/decresetemp/{u}(u=${uuid})} + '\''" value="-">
+    <input type="button" th:onclick="'location.href = \'' + @{/thermostat/increasetemp/{u}(u=${uuid})} + '\''" value="+">
+</div>
+<input type="button" th:onclick="'location.href = \'' + @{/thermostat/toggle/{u}(u=${uuid})} + '\''" th:value="${buttonValue}">
+<input type="button" th:onclick="'location.href = \'' + @{/thermostat/convert/{u}(u=${uuid})} + '\''" value="Switch Units">
+<input type="button" onclick="location.href='/hub'" value="Back to Hub">
+</body>
+</html>

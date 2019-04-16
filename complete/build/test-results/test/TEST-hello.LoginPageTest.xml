@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hello.LoginPageTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-12-01T07:52:19" hostname="Josh-2.local" time="0.099">
+  <properties/>
+  <testcase name="shouldReturnDefaultMessage" classname="hello.LoginPageTest" time="0.099"/>
+  <system-out><![CDATA[2018-11-30 23:52:19.942  INFO 47517 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [hello.LoginPageTest], using SpringBootContextLoader
+2018-11-30 23:52:19.943  INFO 47517 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [hello.LoginPageTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-11-30 23:52:19.945  INFO 47517 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hello.LoginPageTest]: LoginPageTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-11-30 23:52:19.953  INFO 47517 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hello.Application for test class hello.LoginPageTest
+2018-11-30 23:52:19.957  INFO 47517 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-11-30 23:52:19.959  INFO 47517 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@78ef2181, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@d684623, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5a2dbc3e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@65670e7a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6405d87e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2b93d383, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1ce84683, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@41218fba, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@bad79c8, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3e97acf5]
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /user/login
+       Parameters = {}
+          Headers = {}
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = hello.Controllers.LoginController
+           Method = public java.lang.String hello.Controllers.LoginController.loginForm(org.springframework.ui.Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = userLogin
+             View = null
+        Attribute = user
+            value = hello.User@17b8dc43
+           errors = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Language=[en], Content-Type=[text/html;charset=UTF-8]}
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE HTML>
+<html>
+<head>
+    <title>JJ Booleans IOT App</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/buttonstyle.css">
+</head>
+<body>
+    <h1>User Login</h1>
+    <form action="/user/login" method="post">
+        <p>Username: <input type="text" id="userName" name="userName" value="" /></p>
+        <p>Password: <input type="password" id="password" name="password" value="" /></p>
+        <p>
+            <input type="submit" class="button button1" value="Login" />
+            <input type="reset" class="button button1" value="Reset" />
+        </p>
+    </form>
+
+    <input type="button" class="button button1" onclick="location.href='/user/registration'" value="Register">
+
+    
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

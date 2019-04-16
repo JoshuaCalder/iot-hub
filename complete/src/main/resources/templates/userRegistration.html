@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>JJ Booleans IOT App</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/buttonstyle.css">
+</head>
+<body>
+    <h1>User Registration Form</h1>
+        <form action="#" th:action="@{/user/registration}" th:object="${user}" method="post">
+            <p>Username: <input type="text" th:field="*{userName}" /></p>
+            <p>Password: <input type="text" th:field="*{password}" /></p>
+            <label for="userType">User Privilege: </label>
+            <select th:field="*{userType}">
+                <option th:each="type : ${userTypes}"
+                        th:text="${type.description}"
+                        th:value="${type}"></option>
+            </select>
+            <p>
+                <input type="submit" class="button button1" value="Submit" />
+                <input type="reset" class="button button1" value="Reset" />
+                <input type="button" class="button button1" onclick="location.href='/user/login'" value="Back to login">
+            </p>
+        </form>
+        <div th:if="${error}">
+            <p style="display: inline-block; margin: 0" th:text="${error}" />
+        </div>
+</body>
+</html>

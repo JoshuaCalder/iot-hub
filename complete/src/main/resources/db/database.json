@@ -1,0 +1,5 @@
+[
+{"Status":"ON","Type":"Camera","UUID":"5352f217-fe6b-41fd-914d-d4ecdb1f8455"},
+{"Status":"ON","Type":"Thermostat","UUID":"2cf313f2-e47d-44a4-b558-9ae7cc1578be"},
+{"Status":"OFF","Type":"SmartPlug","UUID":"6c5f14db-6d59-4846-b74e-193d97c51f43"},
+]

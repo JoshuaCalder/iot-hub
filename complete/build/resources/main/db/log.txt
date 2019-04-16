@@ -1,0 +1,4 @@
+Thermostat 2cf313f2-e47d-44a4-b558-9ae7cc1578be turned ON @ 2018/11/30 20:47:53
+SHUTDOWN: All devices turned off. @ 2018/11/30 20:47:57
+Camera 5352f217-fe6b-41fd-914d-d4ecdb1f8455 turned ON @ 2018/11/30 22:26:56
+Movement detected by camera 5352f217-fe6b-41fd-914d-d4ecdb1f8455 @ 2018/11/30 22:27:22

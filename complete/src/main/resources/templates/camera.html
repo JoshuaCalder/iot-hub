@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title th:text="'Camera: ' + ${uuid}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/buttonstyle.css">
+</head>
+<br>
+<h1 th:text="'Camera: ' + ${uuid}"></h1>
+<p th:text="'Camera On Status: ' + ${cameraOnStatus} + '!'" />
+<p th:if="${cameraOnStatus}" th:text="'Camera Recording Status: ' + ${cameraRecordingStatus}"/>
+<input type="button" class="button button1" th:onclick="'location.href = \'' + @{/camera/toggle/{u}(u=${uuid})} + '\''" th:value="${buttonValue}">
+<input th:if="${cameraOnStatus == 'ON' and cameraRecordingStatus == 'OFF' and diskSize < 100}" th:onclick="'location.href = \'' + @{/camera/togglerecord/{u}(u=${uuid})} + '\''" type="button" class="button button1" value="Record">
+<input th:if="${cameraOnStatus == 'ON' and cameraRecordingStatus == 'ON' and diskSize < 100}" th:onclick="'location.href = \'' + @{/camera/togglerecord/{u}(u=${uuid})} + '\''" type="button" class="button button1" value="Stop Recording">
+<p th:if="${diskSize >= 100}">Disk Full!</p>
+<p>Disk size: <span id="disk-size" th:text="${diskSize}"></span>/100</p>
+<img th:if="${cameraOnStatus == 'ON'}" src="http://roofcam.royalbcmuseum.bc.ca:8888/axis-cgi/mjpg/video.cgi">
+<!--<img th:if="${cameraOnStatus == 'ON'}" src="/camera.gif">-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script th:if="${cameraRecordingStatus}" th:inline="javascript">
+/*<![CDATA[*/
+    var cameraInterval;
+    if ([[${diskSize}]] < 100) {
+        var cameraInterval = setInterval(tick, 1000);
+    }
+
+    function stopInterval() {
+        clearInterval(cameraInterval);
+     }
+
+    function tick() {
+        $.ajax({
+            url: "/camera/updatedisk/" + [[${uuid}]],
+            type: "GET",
+            success: function(response) {
+                $("#disk-size").html(response);
+                if(response >= 100) {
+                    alert('Camera disk space full!');
+                    location.href = '/camera/' + [[${uuid}]];
+                    stopInterval();
+                }
+            },
+            error: function(xhr, status, error) {
+                alert(xhr.responseText);
+            }
+        });
+    }
+/*]]>*/
+</script>
+<br></br>
+<input type="button" class="button button1" onclick="location.href='/hub'" value="Back to Hub">
+</body>
+</html>

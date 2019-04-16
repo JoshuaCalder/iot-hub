@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hello.MainFunctionalityTests" tests="27" skipped="0" failures="0" errors="0" timestamp="2018-12-01T07:52:19" hostname="Josh-2.local" time="0.151">
+  <properties/>
+  <testcase name="thermostatStopTest" classname="hello.MainFunctionalityTests" time="0.003"/>
+  <testcase name="checkShutdown" classname="hello.MainFunctionalityTests" time="0.003"/>
+  <testcase name="deviceRegisterTest" classname="hello.MainFunctionalityTests" time="0.003"/>
+  <testcase name="notifyHubRoomEnterActivity" classname="hello.MainFunctionalityTests" time="0.003"/>
+  <testcase name="notifyHubLeaveRoomActivity" classname="hello.MainFunctionalityTests" time="0.003"/>
+  <testcase name="cameraStopRecordingTest" classname="hello.MainFunctionalityTests" time="0.003"/>
+  <testcase name="checkIfLogFileExists" classname="hello.MainFunctionalityTests" time="0.003"/>
+  <testcase name="isCameraFullTest" classname="hello.MainFunctionalityTests" time="0.003"/>
+  <testcase name="isCameraShowStream" classname="hello.MainFunctionalityTests" time="0.003"/>
+  <testcase name="checkSmartPlugTestOff" classname="hello.MainFunctionalityTests" time="0.008"/>
+  <testcase name="deviceStatusTest" classname="hello.MainFunctionalityTests" time="0.008"/>
+  <testcase name="toggleSmartPlugTestOn" classname="hello.MainFunctionalityTests" time="0.003"/>
+  <testcase name="toggleLightbulbTestOn" classname="hello.MainFunctionalityTests" time="0.002"/>
+  <testcase name="isVideoDataOffTest" classname="hello.MainFunctionalityTests" time="0.003"/>
+  <testcase name="isVideoDataTest" classname="hello.MainFunctionalityTests" time="0.002"/>
+  <testcase name="adminDeviceStatus" classname="hello.MainFunctionalityTests" time="0.003"/>
+  <testcase name="thermostatChangeUnitFarTest" classname="hello.MainFunctionalityTests" time="0.005"/>
+  <testcase name="deviceRemoveTest" classname="hello.MainFunctionalityTests" time="0.004"/>
+  <testcase name="cameraRecordingTest" classname="hello.MainFunctionalityTests" time="0.003"/>
+  <testcase name="toggleSmartPlugTestOff" classname="hello.MainFunctionalityTests" time="0.003"/>
+  <testcase name="userPrivilege" classname="hello.MainFunctionalityTests" time="0.004"/>
+  <testcase name="toggleLightbulbTestOff" classname="hello.MainFunctionalityTests" time="0.002"/>
+  <testcase name="thermostatStartTest" classname="hello.MainFunctionalityTests" time="0.002"/>
+  <testcase name="thermostatChangeTempTest" classname="hello.MainFunctionalityTests" time="0.002"/>
+  <testcase name="notifyHubAboutTemperatureChange" classname="hello.MainFunctionalityTests" time="0.003"/>
+  <testcase name="thermostatChangeUnitCelTest" classname="hello.MainFunctionalityTests" time="0.003"/>
+  <testcase name="notifyHubAboutCameraDetectingMovement" classname="hello.MainFunctionalityTests" time="0.003"/>
+  <system-out><![CDATA[2018-11-30 23:52:19.764  INFO 47517 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [hello.MainFunctionalityTests], using SpringBootContextLoader
+2018-11-30 23:52:19.765  INFO 47517 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [hello.MainFunctionalityTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-11-30 23:52:19.765  INFO 47517 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hello.MainFunctionalityTests]: MainFunctionalityTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-11-30 23:52:19.769  INFO 47517 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hello.Application for test class hello.MainFunctionalityTests
+2018-11-30 23:52:19.771  INFO 47517 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-11-30 23:52:19.773  INFO 47517 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6398b6cc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6531b12c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@691800b6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@77f9252b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5171d3ce, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@39a1a01d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@10151a2f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2e7bb57b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@71cbecd9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@45de1bb5]
+2018-11-30 23:52:19.892  INFO 47517 --- [    Test worker] hello.Hub                                : Device removed SmartPlug id: f8f63a8a-cca4-453e-a64f-c3fae0e6340d
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

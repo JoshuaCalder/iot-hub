@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hub</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            }
+    </style>
+    <link rel="stylesheet" type="text/css" href="/buttonstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 th:text="Hello + ' ' + ${userName}"></h1><input type="button" class="button button1" onclick="location.href='/user/logout'" value="Logout">
+    <p>Welcome to DeviceHub!</p>
+    <h2>Devices</h2>
+    <input type="button" class="button button1" onclick="location.href='/lightbulb/add'" value="Add Lightbulb">
+    <input type="button" class="button button1" onclick="location.href='/smartplug/add'" value="Add SmartPlug">
+    <input type="button" class="button button1" onclick="location.href='/camera/add'" value="Add Camera">
+    <input type="button" class="button button1" onclick="location.href='/thermostat/add'" value="Add Thermostat">
+    <input type="button" class="button button1" onclick="if (confirm('Are you sure you want to shut down? Doing so will turn off ALL devices.')) location.href='/hub/shutdown';" value="Shutdown">
+    <table style="border: 1px solid black", cellpadding="10">
+        <tr>
+            <th>Device</th>
+            <th>Status</th>
+            <th>Control</th>
+            <th>Remove</th>
+        </tr>
+        <tr th:each="d: ${deviceList}">
+            <td th:text="${d.getValue()}"></td>
+            <td th:text="${d.getValue().getStatus()}"></td>
+            <td style="text-align:center;">
+                <input type="button" class="button button1" th:onclick="'location.href = \'' + @{/edit/{d}(d=${d.getValue().getIdentifier()})} + '\''" value="Control">
+            </td>
+            <td style="text-align:center;">
+                <input type="button" class="button button1" th:onclick="'location.href = \'' + @{/remove/{d}(d=${d.getValue().getIdentifier()})} + '\''" value="Remove">
+            </td>
+        </tr>
+    </table>
+    <!--<div th:if="${isAdmin} == null">-->
+    <h2 th:if="${isAdmin} == true or ${canSeeLog} == true">Activity Log</h2>
+    <!--</div>-->
+    <div th:if="${isAdmin} == true or ${canSeeLog} == true" style="height: 300px; overflow: scroll; border: 2px solid black; padding: 0 30px">
+
+        <ul th:each="log : ${logs}">
+            <li th:text="${log}"></li>
+        </ul>
+    </div>
+    <!--<div>-->
+    <h2 th:if="${isAdmin} == true">Registered User List</h2>
+    <table th:if="${isAdmin} == true" style="border: 1px solid black", cellpadding="10">
+        <tr>
+            <th>Username</th>
+            <th>Privilege</th>
+            <th>Show Log</th>
+            <th>Remove</th>
+        </tr>
+        <tr th:each="user: ${userList}">
+            <td th:text="${user.getValue().getUserName()}"></td>
+            <td th:text="${user.getValue().getUserType().description}"></td>
+            <td style="text-align:center;">
+                <input th:if="${!user.getValue().getUserType().description.equals('Administrator')} and ${user.getValue().isCanSeeLog()} == false" type="button"
+                       class="button button1" th:onclick="'location.href = \'' + @{/user/control/{user}(user=${user.getValue().getUserName()})} + '\''"
+                       value="Grant Log Visibility">
+                <input th:if="${!user.getValue().getUserType().description.equals('Administrator')} and ${user.getValue().isCanSeeLog()} == true" type="button"
+                       class="button button1" th:onclick="'location.href = \'' + @{/user/control/{user}(user=${user.getValue().getUserName()})} + '\''"
+                       value="Disable Log Visibility">
+            </td>
+            <td style="text-align:center;">
+                <input th:if="${!user.getValue().getUserType().description.equals('Administrator')}" type="button"
+                       class="button button1" th:onclick="'location.href = \'' + @{/user/remove/{user}(user=${user.getValue().getUserName()})} + '\''"
+                       value="Remove">
+            </td>
+        </tr>
+    </table>
+</div>
+<div>
+
+</div>
+</body>
+
+<!-- check if random event occured every 1 second -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script th:inline="javascript">
+    var eventCheckInterval = setInterval(sendAjax, 1000);
+    function sendAjax() {
+        $.ajax({
+            url: "/check_event",
+            type: "GET",
+            success: function(response) {
+                if (response != "") {
+                    if(alert(response)){}
+                    else window.location.reload();
+                } else {
+                    console.log("checking random event..");
+                }
+            },
+            error: function(xhr, status, error) {
+                console.log(xhr.responseText);
+            }
+        });
+    }
+/*]]>*/
+</script>
+
+</html>
