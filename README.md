@@ -14,11 +14,13 @@ Running the program: To run this program, the user must go to the folder
                      fit and must use the login credentials username: user,
                      password: password to acces further screens.
                      Sequence of events:
-                     1) $ cd complete
-                     2) $ Gradle BootRun (Executing should stop at around 75%. This is supposed to happen)
-                     3) Open up web browser and visit localhost:8080 (or whatever host:port combo you specified) 
-                     4) Click 'get started'
-                     5) Create a new user account
-                     5) Go back to login page and sign in with newly created account
-                     6) You're good to go
+                     
+                     1. $ cd complete
+                     2. $ Gradle BootRun (Executing should stop at around 75%. This is supposed to happen)
+                     3. Open up web browser and visit localhost:8080 (or whatever host:port combo you specified) 
+                     4. Click 'get started'
+                     5. Create a new user account
+                     5. Go back to login page and sign in with newly created account
+                     6. You're good to go
+                     
 *******************************************************************************
